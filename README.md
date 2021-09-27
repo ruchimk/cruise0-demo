@@ -1,6 +1,6 @@
 # Cruise0 Modernization Demo
 
-Sample implementations of [Auth0 Account Linking](https://auth0.com/docs/link-accounts).
+Sample customer walk through for their SPA React modernization project to show how they can log users via social logins, verified emails and user demographics
 
 ## Key Features
 
