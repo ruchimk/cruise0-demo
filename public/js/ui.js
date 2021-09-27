@@ -141,13 +141,13 @@ const router = {
     try {
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
+      const isAuthenticated = await auth0.isAuthenticated();
       if(urlParams.get('error_description')) {
         document.getElementsByClassName('lead')[0].style.visibility = 'hidden';
         document.getElementById('error').innerHTML=urlParams.get('error_description');
         document.getElementById('error').style.padding="20px 0";
         document.getElementById('error').style.margin="20px 0";
       }
-      const isAuthenticated = await auth0.isAuthenticated();
       if (isAuthenticated) {
         const { sub: userId, ...user } = await auth0.getUser();
         const profile = await getUserProfile(userId);
