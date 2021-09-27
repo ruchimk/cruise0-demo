@@ -166,11 +166,15 @@ const router = {
           null,
           2
         );
+       
+
         document.querySelectorAll("pre code").forEach(hljs.highlightBlock);
   
         const { connection: primaryConnection = "" } = primaryIdentity;
         const { name = "", picture, email = "" } = user;
         eachElement(".profile-image", (e) => (e.src = picture));
+         // Adding country flag using country_code property from user profile
+        eachElement(".user-flag", (e) => (e.src = 'https://www.countryflags.io/'+user['https://cruise0-user.com/country_code']+'/flat/64.png'));
         eachElement(".user-name", (e) => (e.innerText = name));
   
         eachElement(
