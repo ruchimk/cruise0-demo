@@ -9,10 +9,10 @@ This demo is meant to demonstrate how Auth0 can support the Cruise0 app modeniza
 * It demonstrates how a new customer can sign up, and how an existing customer can sign in with email/password, and a social login (Google).
 * Demonstrates how you can link accounts with the same email (i.e. database and social accounts for the same user) with Auth0 via our account linking feature
 * Will show you howyou can show errors if the customer’s email address is not verified. 
-* Profile page shows photo and country flag are displayed without prompting users to input directly (using rules and IP address of current user)
+* Profile page shows profile photo and country flag are displayed without prompting users to input directly (using rules and IP address of current user)
 * If the photo and country of the customer are known, make sure this information is passed back to the application and shown after the user authenticates.
 
-## How to install
+## How to Deploy and user this Example Application
 
 1. Clone the repo
 2. npm install && npm start
@@ -22,7 +22,7 @@ This demo is meant to demonstrate how Auth0 can support the Cruise0 app modeniza
 6. Verify your email by clicking on the link
 7. Login and see your Primary profile 
 8. Link your secondary account with the same email (Google or Database) via "Link Account button"
-9. Check your Auth0's Manage Dashboard and see the picture and country being saved in user_metadata for the user you are testing with
+9. Check your Auth0's Manage Dashboard and see the profile photo and country being saved in user_metadata for the user you are testing with
 
 ## What is Auth0?
 
