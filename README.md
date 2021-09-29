@@ -12,6 +12,18 @@ This demo is meant to demonstrate how Auth0 can support the Cruise0 app modeniza
 * Profile page shows photo and country flag are displayed without prompting users to input directly (using rules and IP address of current user)
 * If the photo and country of the customer are known, make sure this information is passed back to the application and shown after the user authenticates.
 
+## How to install
+
+1. Clone the repo
+2. npm install && npm start
+3. Turn on the "Force email verification" rule in Auth0's Manage Dashboard
+4. Turn on the "Add country to the user profile" rule in Auth0's Manage Dashboard
+5. Login to the Demo Cruise0 application
+6. Verify your email by clicking on the link
+7. Login and see your Primary profile 
+8. Link your secondary account with the same email (Google or Database) via "Link Account button"
+9. Check your Auth0's Manage Dashboard and see the picture and country being saved in user_metadata for the user you are testing with
+
 ## What is Auth0?
 
 Auth0 helps you to:
@@ -33,6 +45,6 @@ Auth0 helps you to:
 * [User Initiated Account Linking within a Single Page Application Sample](https://github.com/auth0-samples/auth0-link-accounts-sample/tree/master/SPA)
 * [Client side Account Linking](https://auth0.com/docs/users/user-account-linking/user-initiated-account-linking-client-side-implementation)
 * [Social Identity Providers](https://auth0.com/docs/connections/social)
-* [Verify Email Rule](https://auth0.com/rules/email-verified)
+* [Force email verification Rule](https://auth0.com/rules/email-verified)
 * [Add country to the user profile](https://auth0.com/rules/add-country)
 
