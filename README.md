@@ -31,8 +31,8 @@ Auth0 helps you to:
 ## Resources
 
 * [User Initiated Account Linking within a Single Page Application Sample](https://github.com/auth0-samples/auth0-link-accounts-sample/tree/master/SPA)
-* [Auth0 Rules](https://auth0.com/docs/rules)
-* [Account Linking](https://auth0.com/docs/users/user-account-linking)
+* [Client side Account Linking](https://auth0.com/docs/users/user-account-linking/user-initiated-account-linking-client-side-implementation)
 * [Social Identity Providers](https://auth0.com/docs/connections/social)
-* [Verify Emails] (https://auth0.com/docs/users/verify-emails)
+* [Verify Email Rule](https://auth0.com/rules/email-verified)
+* [Add country to the user profile](https://auth0.com/rules/add-country)
 
