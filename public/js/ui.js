@@ -91,7 +91,7 @@ const router = {
       isSocial: identity.isSocial,
       provider: identity.provider,
       user_id: identity.user_id,
-      
+      profileData: JSON.stringify(identity.profileData, null, 2),
     });
   
     const refresh = async () => {
@@ -164,13 +164,14 @@ const router = {
           profile.identities.find(
             (id) => `${id.provider}|${id.user_id}` === userId
           );
-  
+        getUserMetadata(userId).then((userMetadata) => {
+        console.log("userMetadata:", userMetadata);
         document.getElementById("profile-data").innerText = JSON.stringify(
-          { ...primaryIdentity, ...user },
+          { ...primaryIdentity, ...user, ...userMetadata },
           null,
           2
         );
-       
+        });
 
         document.querySelectorAll("pre code").forEach(hljs.highlightBlock);
   
