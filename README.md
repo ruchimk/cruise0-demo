@@ -15,12 +15,12 @@ This demo is meant to demonstrate how Auth0 can support the Cruise0 app modeniza
 ## How to Deploy and user this Example Application
 
 1. Clone the repository
-2. run following command in cloned repository: npm install && npm start
+2. Run following command in cloned repository: npm install && npm start
 3. Turn on the "Force email verification" rule in Auth0's Manage Dashboard
 4. Turn on the "Add country to the user profile" rule in Auth0's Manage Dashboard
 5. Login to the Demo Cruise0 application
 6. Verify your email by clicking on the link
-7. Login and see your Primary profile 
+7. Login and see your Primary account profile in the /profile page 
 8. Link your secondary account with the same email (Google or Database) via "Link Account button"
 9. Check your Auth0's Manage Dashboard and see the profile photo and country being saved in user_metadata for the user you are testing with
 
