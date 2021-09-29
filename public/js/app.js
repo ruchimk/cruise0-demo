@@ -60,6 +60,7 @@ const authenticateUser = async () => {
   return await a0.getIdTokenClaims();
 };
 
+
 const linkAccount = async () => {
   const accessToken = await auth0.getTokenSilently();
   const { sub } = await auth0.getUser();
@@ -115,6 +116,34 @@ const getUserProfile = async (userId) => {
   return await response.json();
 };
 
+
+//updateUserMetadata to add user_metadata in the profile
+const updateUserMetadata = async (userId) => {
+  const user_id = userId;
+  console.log("userId:", userId);
+  const accessToken = await auth0.getTokenSilently();
+  const current_user  =  await auth0.getUser();
+  const picture = current_user.picture;
+  const country = current_user["https://cruise0-user.com/country"];
+  console.log(country);
+  user_metadata = {"picture":picture, "country": country}
+  console.log(JSON.stringify(user_metadata));
+  console.log("current_user:", current_user);
+  const response = await fetch(
+    `https://${config.domain}/api/v2/users/${user_id}`,{
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify({
+        user_metadata: user_metadata
+      }),
+    });
+    return await response.json();
+  };
+
+  
 // Will run when page finishes loading
 window.onload = async () => {
   const response = await fetchAuthConfig();
@@ -124,7 +153,7 @@ window.onload = async () => {
     client_id: config.clientId,
     audience: `https://${config.domain}/api/v2/`,
     scope:
-      "openid email profile read:current_user update:current_user_identities",
+      "openid email profile read:current_user update:current_user_metadata update:current_user_identities",
   });
 
   const query = window.location.search;

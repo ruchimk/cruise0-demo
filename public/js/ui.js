@@ -91,7 +91,7 @@ const router = {
       isSocial: identity.isSocial,
       provider: identity.provider,
       user_id: identity.user_id,
-      profileData: JSON.stringify(identity.profileData, null, 2),
+      
     });
   
     const refresh = async () => {
@@ -135,6 +135,8 @@ const router = {
         showInfoMessage(message);
       }
     });
+
+
   };
   
   const updateUI = async () => {
@@ -150,7 +152,9 @@ const router = {
       }
       if (isAuthenticated) {
         const { sub: userId, ...user } = await auth0.getUser();
-        const profile = await getUserProfile(userId);
+        var profile = await getUserProfile(userId);
+        var updatedProfileWithMetdata = await updateUserMetadata(userId);
+        profile = updatedProfileWithMetdata;
         if (profile) refreshLinkedAccounts(profile);
   
         // extract provider/user_id from primary identity

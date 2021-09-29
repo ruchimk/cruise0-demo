@@ -37,5 +37,7 @@ label {
   background: #ffffff;
   margin: 5% 0;
   padding: 5%;
-  opacity: .7;
+}
+.hljs{
+  width: 100%;
 }

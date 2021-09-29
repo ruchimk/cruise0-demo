@@ -1,4 +1,8 @@
 {
     "domain": "ruchimalik.auth0.com",
-    "clientId": "YieEHsduLEu2JIQRA3p8nzl1NBLcU4kR"
+    "clientId": "YieEHsduLEu2JIQRA3p8nzl1NBLcU4kR",
+    "m2mClientId":"sVp4ai5UkiWGvgWcYBY4qKmESJqgxoRz",
+    "clientSecret":"30DoCwRuxc07uC4VNo76J0ebmX9Piwn2s0d9AXOrRNksNckDgHAIz2pAQfqBRH6f",
+    "audience":"https://ruchimalik.auth0.com/api/v2/",
+    "grantType":"client_credentials" 
 }
