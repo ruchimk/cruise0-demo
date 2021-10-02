@@ -36,13 +36,22 @@ body {
 }
 #linked-accounts {
   background: #ffffff;
-  margin: 5% 0;
   padding: 5%;
+  border: 4mm ridge #007bff;
 }
 .hljs{
   width: 100%;
+  color: black!important;
+  background: #ffffff!important;
+  border: 4mm ridge #007bff;
 }
 .h-100{
   height: auto !important;
   border: none!important;
+}
+footer{
+  margin: 30px 0;
+}
+td{
+  max-width: 400px;
 }
